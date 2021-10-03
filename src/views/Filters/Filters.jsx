@@ -1,9 +1,13 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import './Filters.css'
 
 function Filters() {
      const numbers = [0,1,2,3];
-     const suggestedItems = ["Open Now 11:32 AM","Find businesses that are open now","Yelp Delivery","Yelp Takeout"];
+     const suggestedItems = ["Open Now 11:32 AM","Yelp Delivery","Yelp Takeout"];
+     const features = ["Offers Delivery","Offers Takeout","Good for Kids","Good for Groups"];
+     const neighborhoods = 	["Chinatown","Atwater Village","Little Tokyo","Arts District"];
+     const distance = [	"Bird's-eye View","Driving (5 mi.)","Biking (2 mi.)","Walking (1 mi.)","Within 4 blocks"];
      
      let dollarSign='';
      const listItems = numbers.map( (numbers ) => {
@@ -14,8 +18,22 @@ function Filters() {
      })   
       
 
-     const checkItems = suggestedItems.map( (suggestedItems) => <input type="checkbox" />  );   
- 
+     const suggestedItemsList = suggestedItems.map( (items ,suggestedItem) =>  (       
+       <label className='list-items'><div className="input-overlap"><input type="checkbox"/></div><div className="list-item-name">{ items}</div></label>
+     ));
+     
+
+    const featuresList = features.map( ( items )=><label className='list-items'>
+        <div className="input-overlap"><input type="checkbox" /></div>
+        <div className="list-item-name">{ items }</div></label>)
+
+    const neighborhoodsList = neighborhoods.map( ( items )=><label className='list-items'>
+        <div className="input-overlap"><input type="checkbox" /></div>
+        <div className="list-item-name">{items }</div></label>)
+
+    const distanceList = distance.map( ( items )=><label className='list-items'>
+      <div className="input-overlap"><input type="radio" /></div> 
+      <div className="list-item-name">{items }</div></label>)
     
 
     return (
@@ -25,14 +43,28 @@ function Filters() {
                {listItems}
             </ul>
             <hr/>
-            <p  className="filters-section-subheadings">Suggested</p>
-            <ul className='suggested-items-container'>
-              { checkItems }
-            </ul>
-            <p>See all</p>
 
-            <p  className="filters-section-subheadings">Features</p>
-              { checkItems }
+            <p className="filters-section-subheadings">Suggested</p>
+            <ul className='items-container'>
+              { suggestedItemsList }              
+            </ul>          
+            
+            <p className="filters-section-subheadings">Features</p>
+            <ul className='items-container'>
+              { featuresList }
+            </ul>
+            <p className="see-all">See all</p>
+
+            <p className="filters-section-subheadings">Neighborhoods</p>
+            <ul className='items-container'>
+              { neighborhoodsList }
+            </ul>
+            <p className="see-all">See all</p>
+
+            <p className="filters-section-subheadings">Distance</p>
+            <ul className='items-container'>
+              { distanceList }
+            </ul>           
         </div>
     )
 }

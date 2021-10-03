@@ -36,8 +36,8 @@
 }
 
 .App-sidebar-left{
-  background-color: antiquewhite; 
   min-width: 18vw;
+  height: fit-content;
 }
 
 .App-sidebar-right{
