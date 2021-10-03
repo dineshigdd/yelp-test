@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.yelp-logo {  
+   display: flex;
+   justify-content: flex-start;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,15 +14,109 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  min-height: 10vh;
+  display: flex;  
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly; 
+  color: rgba(43,39,60,1); 
+  font-size: 14px;
+  line-height: 20px;
+  z-index: 1000;
+
+}
+
+.App-main-section{
+  display: flex;
+  height: 100vh;
+  position: relative;
+  top: 100px;
+}
+
+.App-sidebar-left{
+  background-color: antiquewhite; 
+  min-width: 18vw;
+}
+
+.App-sidebar-right{
+  background-color: lightgreen;
+  min-width: 25vw;
+}
+
+.App-search-result-section{
+  background-color: lightcoral;
+  min-width: 57vw;
+}
+
+
+.App-search-bar-container{  
+  box-shadow: lightgray 2px 5px 10px 6px;
+  border-radius: 5px;
+}
+
+
+
+/*styles for right section of the header begins*/
+.App-header-right-corner {
+  display: inherit;
+}
+
+
+.App-header-right-corner div:first-child{
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.App-header-right-corner div span{
+  margin: 10px;
+}
+
+.App-header-right-corner div:first-child span{
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.App-header-right-corner div:first-child span:hover{
+  
+   background-color:rgb(243, 239, 239);  
+}
+
+.App-header-right-corner div:first-child span:first-child{
+  margin-right: 12px;
+}
+
+.App-header-right-corner div:first-child span:nth-child(2){
+  margin-right: 12px;
+}
+
+
+.App-header-right-corner div:nth-child(2){
+  margin: 0 5px 0 0;
+}
+
+
+
+.App-auth-link{
+  cursor: pointer;
+  padding: 5px 15px 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.App-login-link{
+  border: 1px solid lightgrey;
+}
+
+.App-signup-link{
+  background-color:rgb(244,13,21);  
   color: white;
 }
+
+/*styles for right section of the header ends*/
 
 .App-link {
   color: #61dafb;
