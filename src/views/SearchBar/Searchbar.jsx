@@ -17,10 +17,12 @@ function SearchBar() {
                     </datalist>
                     <input className="location-input" type="text"></input>                    
                 </div>    
-                {/* <div className="search-icon-contianer"> */}
-                    <SearchRoundedIcon className="search-icon" fontSize="large" />        
-                {/* </div> */}
+               <div className="search-icon-contianer">
+                <div className="mobile-cancel-link"><a>Cancel</a></div>
+                 <SearchRoundedIcon className="search-icon" fontSize="large" />        
+                </div>                
              </div>
+
              
         // </div>
     )

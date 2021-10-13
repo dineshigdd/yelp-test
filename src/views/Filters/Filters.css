@@ -90,3 +90,16 @@
     margin-top: -15px;
     font-weight: 600;
 }
+
+/*--Mobile styles start ---*/
+@media (min-width: 300px) and (max-width: 800px){
+
+    .filter-section{
+        min-width: 90vw;
+        margin-left: 3vw;
+    }
+    
+    .filter-items-container {
+               justify-content: center;
+    }
+}

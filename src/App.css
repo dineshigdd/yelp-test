@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.yelp-logo {  
-   display: flex;
-   justify-content: flex-start;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   position: fixed;
   width: 100vw;
@@ -28,6 +17,10 @@
 
 }
 
+.App-logo-and-menu-container{
+    display: flex;    
+}
+
 .App-main-section{
   display: flex;
   height: 100vh;
@@ -41,8 +34,8 @@
 }
 
 .App-sidebar-right{
-  background-color: lightgreen;
   min-width: 25vw;
+  padding: 0 10px;
 }
 
 .App-search-result-section{
@@ -93,7 +86,7 @@
 }
 
 
-.App-header-right-corner div:nth-child(2){
+.App-header-right-corner div:nth-child(2){ /**login and sign up links in the header**/
   margin: 0 5px 0 0;
 }
 
@@ -118,15 +111,72 @@
 
 /*styles for right section of the header ends*/
 
-.App-link {
-  color: #61dafb;
+/*styles for mobile view */
+
+@media (min-width: 300px) and (max-width: 800px) {
+  
+  .App-header, .App-search-bar-container{
+    flex-direction: column;
+    background-color: violet;
+  }
+
+  .App-header-right-corner{
+    display: none;
+  }
+
+  .App-search-bar-container {
+    height: fit-content;
+    box-shadow: lightgrey 2px 2px 10px 6px;
+    border-radius: 5px;
+  }
+
+  .App-logo-and-menu-container{
+    z-index: 5000;
+    display: flex;
+    align-self: flex-start;
+    margin-top: -25px;
+    margin-bottom: 10px    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .yelp-logo {  
+    margin-right: 330px;
+    margin-left: 15px
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile-menu-icon{
+    z-index: 6000;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 10px;
+  
   }
+
+  
+  div.mobile-menu-icon > svg{
+    width: 2em;
+    height: 1.5em;
+  }
+
+  .App-sidebar-left{
+    display: flex;
+    margin-top: 160px;
+    background-color: white;
+    max-width: 100%;
+  }
+
+  .App-search-result-section, .App-sidebar-right{
+    /* display: none; */
+  }
+
+  .mobile-filter-list-map-links{
+    display: flex;
+    margin: 20px 5px 20px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+
+  
 }

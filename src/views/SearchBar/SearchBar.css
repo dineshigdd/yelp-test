@@ -1,6 +1,6 @@
 .search-bar-outer-container{
-    display: inline-flex;
-    height: 50px;
+    display: flex;
+    height: fit-content;
     max-width: inherit;    
 }
 
@@ -21,6 +21,7 @@
 }
 
 .search-criteria, .location-input{
+    display: inline-flex;
     width: 300px;
     height: -webkit-fill-available;
     border: none;
@@ -38,6 +39,7 @@
 
 
 svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeLarge.css-tzssek-MuiSvgIcon-root{/*search icon */
+    display: flex;
     color: white;
     background-color: #F40D15;
     padding: 5px;
@@ -46,3 +48,42 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeLarge.css-tzssek-MuiSvgIcon-root{/*search
     height: 1.13em;
 
 }
+
+.mobile-cancel-link{
+    display: none;
+}
+@media (max-width: 800px) {
+    .search-bar-outer-container , .search-criteria,.search-icon-container{
+      flex-direction: column;
+    }
+
+    .search-criteria, .location-input{
+        width: 90vw;
+        height: 30px;
+    }
+
+    .mobile-cancel-link{
+        display: flex;        
+        margin: 14px;
+        color: white;
+        background-color: #F40D15;
+        padding: 5px;
+        border-radius: 5px;
+        height: 40px;    
+    }
+
+    .search-icon-contianer {
+        display: flex;
+        flex-direction: row;
+        align-self: end;
+        margin-top: 25px;
+        margin-right: 10px;
+    }
+    
+
+    svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeLarge.css-tzssek-MuiSvgIcon-root{
+        margin-top: 15px;
+        margin-right: 16px;
+        border-radius: 5px;
+    }
+  }

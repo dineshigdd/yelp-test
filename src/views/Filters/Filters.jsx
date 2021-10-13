@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import './Filters.css'
 
 function Filters() {
@@ -37,7 +36,7 @@ function Filters() {
     
 
     return (
-        <div>
+        <div className="filter-section">
             <p className="filters-section-subheadings">Filters</p>
             <ul className='filter-items-container'>
                {listItems}
