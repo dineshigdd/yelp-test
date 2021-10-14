@@ -72,8 +72,8 @@
   padding: 8px 10px;
   border-radius: 5px;
 }
-.App-header-right-corner div:first-child span:hover{
-  
+
+.App-header-right-corner div:first-child span:hover{  
    background-color:rgb(243, 239, 239);  
 }
 
@@ -89,8 +89,6 @@
 .App-header-right-corner div:nth-child(2){ /**login and sign up links in the header**/
   margin: 0 5px 0 0;
 }
-
-
 
 .App-auth-link{
   cursor: pointer;
@@ -109,6 +107,12 @@
   color: white;
 }
 
+.action-buttons{
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding: 3px 10px;
+    color: #727070;
+}
 /*styles for right section of the header ends*/
 
 /*styles for mobile view */
@@ -116,9 +120,9 @@
 @media (min-width: 300px) and (max-width: 800px) {
   
   .App-header, .App-search-bar-container{
-    flex-direction: column;
-    background-color: violet;
+    flex-direction: column;   
   }
+ 
 
   .App-header-right-corner{
     display: none;
@@ -126,21 +130,27 @@
 
   .App-search-bar-container {
     height: fit-content;
-    box-shadow: lightgrey 2px 2px 10px 6px;
-    border-radius: 5px;
+    box-shadow: none;
+    background-color: #d32323;
+    min-width: 100%;
+    border-radius: 0px;
+    margin-bottom: -20px;
   }
 
   .App-logo-and-menu-container{
     z-index: 5000;
     display: flex;
     align-self: flex-start;
-    margin-top: -25px;
-    margin-bottom: 10px    
+    margin-top: -45px;
+    /* margin-bottom: 10px; */
+    background-color: #d32323;
 }
 
   .yelp-logo {  
     margin-right: 330px;
-    margin-left: 15px
+    margin-left: 15px;
+    width: 17vw;
+    content:url("./assets//images//yelp-logo-mobile.PNG")
   }
 
   .mobile-menu-icon{
@@ -148,12 +158,12 @@
     display: flex;
     align-self: flex-end;
     margin-top: 10px;
-  
+    color: white;  
   }
 
   
   div.mobile-menu-icon > svg{
-    width: 2em;
+    width: 1em;
     height: 1.5em;
   }
 
@@ -170,12 +180,12 @@
 
   .mobile-filter-list-map-links{
     display: flex;
-    margin: 20px 5px 20px 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f4f2f2;
     justify-content: space-between;
     align-self: stretch;
+    border: 1px solid lightgray;
   }
 
   

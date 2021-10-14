@@ -45,10 +45,9 @@ function App() {
   return (
     <div className="App">
       <header className='App-header'>
-        <div className="mobile-menu-icon"><MenuIcon /></div>
-
-        <div className="App-logo-and-menu-container">             
-               <img className='yelp-logo' src='assests/images/yelp-logo.png'/>                                
+         <div className="mobile-menu-icon"><MenuIcon /></div>
+            <div className="App-logo-and-menu-container">           
+               <img className='yelp-logo' src='assests/images/yelp-logo.png'/>                                       
         </div>
      
         <div className="App-search-bar-container">
@@ -57,11 +56,11 @@ function App() {
 
         <div className="mobile-filter-list-map-links">
               <div>
-                 <button id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
+                 <button className="action-buttons" id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
               </div>
               <div>
-              <button id="list-button" onClick={ ()=>displaySections() }>List</button>
-              <button id="map-button" onClick={ ()=>displaySections('map') }>Map</button>      
+              <button className="action-buttons"  id="list-button" onClick={ ()=>displaySections() }>List</button>
+              <button className="action-buttons"  id="map-button" onClick={ ()=>displaySections('map') }>Map</button>      
               </div>
         </div>
         
