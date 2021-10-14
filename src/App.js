@@ -44,25 +44,19 @@ function App() {
  
   return (
     <div className="App">
-      <header className='App-header'>
-         <div className="mobile-menu-icon"><MenuIcon /></div>
+      <header className='App-header'>         
             <div className="App-logo-and-menu-container">           
-               <img className='yelp-logo' src='assests/images/yelp-logo.png'/>                                       
+               {/* <div className='yelp-logo-container'> */}
+                 <img className='yelp-logo' src='assests/images/yelp-logo.png'/>
+                {/* </div>  */}
+               <MenuIcon className="mobile-menu-icon"/>                                 
         </div>
      
         <div className="App-search-bar-container">
             <SearchBar />
         </div>
 
-        <div className="mobile-filter-list-map-links">
-              <div>
-                 <button className="action-buttons" id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
-              </div>
-              <div>
-              <button className="action-buttons"  id="list-button" onClick={ ()=>displaySections() }>List</button>
-              <button className="action-buttons"  id="map-button" onClick={ ()=>displaySections('map') }>Map</button>      
-              </div>
-        </div>
+        
         
         <div className="App-header-right-corner">
           <div>
@@ -77,6 +71,16 @@ function App() {
       </header>
 
       <main className="App-main-section">
+      <div className="mobile-filter-list-map-links">
+              <div>
+                 <button className="action-buttons" id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
+              </div>
+              <div>
+              <button className="action-buttons"  id="list-button" onClick={ ()=>displaySections() }>List</button>
+              <button className="action-buttons"  id="map-button" onClick={ ()=>displaySections('map') }>Map</button>      
+              </div>
+        </div>
+      
       { state }
      
       </main>
