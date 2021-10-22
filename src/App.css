@@ -19,6 +19,7 @@
 
 .App-logo-and-menu-container{
     display: flex;    
+    z-index: inherit;
 }
 
 .App-main-section{
@@ -162,17 +163,15 @@
   }
 
   .mobile-menu-icon{
-    /* z-index: 6000; */
-    display: flex;
-    align-self: flex-end;    
-    margin-right: 2vw;
-    color: white;  
+    position: relative;
+    top: 12px;
+    right: 25px;
+    color: white;
+    cursor: pointer;
   }
 
-  
-  .mobile-menu-icon{
-    /* width: 1em;
-    height: 1.5em; */
+  .App-logo-and-menu-container > svg {
+    
   }
 
   .App-sidebar-left{
