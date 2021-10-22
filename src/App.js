@@ -15,18 +15,19 @@ function App() {
       setstate(<div className="App-sidebar-left"><Filters /></div>);
       document.getElementById('filter-button').textContent = 'Cancel';    
       setBtnstate( false );
+
      break;
 
      case 'map':
-       console.log( "Map");
+     
       setstate( <section className="App-search-result-section"><Map /></section>);     
       // setBtnstate( false )
      break;
 
-     default://display list of search results
-      // const searchReasult = [0,1,2];
-      console.log( "List");
-      setstate(<aside className="App-sidebar-right"><SearchResult /></aside>);     
+     default:
+       //display list of search results
+      const searchReasult = [0,1,2];
+      setstate(<aside className="App-sidebar-right">{ searchReasult.map( e => <SearchResult /> ) }</aside>);     
       // setBtnstate( false )
    }
 
