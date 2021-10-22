@@ -3,17 +3,18 @@ import './SearchResult.css'
 import { Review } from '..'
 import hotel from '../../assets/images/hotel.jpg';
 
+
 function SearchResult() {
     return (
         <div className="search-result-container">
-             <p className="search-result-heading">The 10 Best Places near 7557 S Sepulveda Blvd, Los Angeles, CA 90045</p>
+            <p className="search-result-heading">The 10 Best Places near 7557 S Sepulveda Blvd, Los Angeles, CA 90045</p>
             <div className="single-search-result-container">
                 <div>
                     <img className="search-result-image" src={ hotel }/>  
                 </div>   
 
                 <div className="search-result-info">           
-                    <div className="search-result-top">            
+                     <div className="search-result-top">            
                         <div className="name-and-reviews">
                             <p>Local sandwich shop</p>
                             <div className="reviews-container">
@@ -41,7 +42,7 @@ function SearchResult() {
                   
                 </div>
             </div>
-            <div className="CTA-link"><a>Start Order</a></div>
+            <div className="CTA-link"><a>Start Order</a></div> 
         </div>
     )
 }
