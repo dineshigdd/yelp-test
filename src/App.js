@@ -7,62 +7,80 @@ import { useState } from 'react';
 function App() {
  const [state, setstate] = useState(true);
  const [btnState, setBtnstate] = useState(true);
- 
 
- const displaySections = (component)=>{
+ const [ logoMenuState , setLogoMenuState ] = useState(<>
+  <img className='yelp-logo'/>          
+  <MenuIcon className="mobile-menu-icon"/>
+ </>);
+
+ const [ isfilterListMapButtonState, setIsFilterListMapButtonState ] = useState(true);
+
+ const filterListMapBar = (
+            <div className="mobile-filter-list-map-links">
+                          <div>
+                            <button className="action-buttons" id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
+                          </div>
+                              <div>
+                                  { (btnState) ? 
+                                  <>
+                                    <button className="action-buttons"  id="list-button" onClick={ ()=>displaySections('list') }>List</button> 
+                                    <button className="action-buttons"  id="map-button" onClick={ ()=>displaySections('map') }>Map</button>
+                                </>:
+                                <><button className="action-buttons"  id="search-button" onClick={ ()=>displaySections("search") }>Search</button></>
+                                }              
+                                    
+                              </div>
+              </div> 
+              );
+
+ const [ filterListMapButtonState, setFilterListMapButtonState ] = useState(filterListMapBar);
+
+ const displaySections = ( component )=>{
    switch(component){
      case 'filters':
       setstate(<div className="App-sidebar-left"><Filters /></div>);
-      document.getElementById('filter-button').textContent = 'Cancel';
+      document.getElementById('filter-button').textContent = 'Cancel';    
       setBtnstate( false );
+
      break;
 
      case 'map':
+     
       setstate( <section className="App-search-result-section"><Map /></section>);     
       // setBtnstate( false )
      break;
 
      default:
-      const searachReasult = [0,1,2]
-      setstate(<aside className="App-sidebar-right">{ searachReasult.map( element=> <SearchResult />)}</aside>);     
+       //display list of search results
+      const searchReasult = [0,1,2];
+      setstate(<aside className="App-sidebar-right">{ searchReasult.map( e => <SearchResult /> ) }</aside>);     
       // setBtnstate( false )
    }
 
 
-    if( btnState ){
-       
-    }
-    else{
+    if( !btnState ){
         setstate(null);
         document.getElementById('filter-button').textContent = 'Filters';
         setBtnstate( true );
     }
-    
 
+  
 
- }
+    } 
  
   return (
     <div className="App">
-      <header className='App-header'>
-         <div className="mobile-menu-icon"><MenuIcon /></div>
+      <header className='App-header'>         
             <div className="App-logo-and-menu-container">           
-               <img className='yelp-logo' src='assests/images/yelp-logo.png'/>                                       
+                { logoMenuState }                                                 
         </div>
      
         <div className="App-search-bar-container">
-            <SearchBar />
+            <SearchBar LogoMenuState={ setLogoMenuState } IsFilterListMapButtonState = { setIsFilterListMapButtonState }/>
+            
         </div>
 
-        <div className="mobile-filter-list-map-links">
-              <div>
-                 <button className="action-buttons" id="filter-button" onClick={ ()=>displaySections('filters') }>Filters</button>
-              </div>
-              <div>
-              <button className="action-buttons"  id="list-button" onClick={ ()=>displaySections() }>List</button>
-              <button className="action-buttons"  id="map-button" onClick={ ()=>displaySections('map') }>Map</button>      
-              </div>
-        </div>
+        
         
         <div className="App-header-right-corner">
           <div>
@@ -77,7 +95,11 @@ function App() {
       </header>
 
       <main className="App-main-section">
-      { state }
+         
+      { isfilterListMapButtonState ? filterListMapButtonState : '' }
+           
+      
+        { state }
      
       </main>
       

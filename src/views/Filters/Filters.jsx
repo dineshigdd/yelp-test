@@ -17,22 +17,22 @@ function Filters() {
      })   
       
 
-     const suggestedItemsList = suggestedItems.map( (items ,suggestedItem) =>  (       
-       <label className='list-items'><div className="input-overlap"><input type="checkbox"/></div><div className="list-item-name">{ items}</div></label>
+     const suggestedItemsList = suggestedItems.map( (item ) =>  (       
+       <label className='list-items' key={ suggestedItems.indexOf( item ) }><div className="input-overlap"><input type="checkbox"/></div><div className="list-item-name">{ item }</div></label>
      ));
      
 
-    const featuresList = features.map( ( items )=><label className='list-items'>
+    const featuresList = features.map( ( item )=><label className='list-items' key={ features.indexOf( item ) }>
         <div className="input-overlap"><input type="checkbox" /></div>
-        <div className="list-item-name">{ items }</div></label>)
+        <div className="list-item-name">{ item }</div></label>)
 
-    const neighborhoodsList = neighborhoods.map( ( items )=><label className='list-items'>
+    const neighborhoodsList = neighborhoods.map( ( item )=><label className='list-items' key={ neighborhoods.indexOf( item )}>
         <div className="input-overlap"><input type="checkbox" /></div>
-        <div className="list-item-name">{items }</div></label>)
+        <div className="list-item-name">{item }</div></label>)
 
-    const distanceList = distance.map( ( items )=><label className='list-items'>
+    const distanceList = distance.map( ( item )=><label className='list-items' key={ distance.indexOf( item )}>
       <div className="input-overlap"><input type="radio" /></div> 
-      <div className="list-item-name">{items }</div></label>)
+      <div className="list-item-name">{item }</div></label>)
     
 
     return (
