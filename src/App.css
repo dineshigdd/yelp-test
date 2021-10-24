@@ -160,18 +160,11 @@
 }
 
   .yelp-logo {  
-<<<<<<< HEAD
-    margin-right: 330px;
-    margin-left: 15px;
-    width: 17vw;
-    content:url("./assests/images/yelp-logo-mobile.png")
-=======
     margin-left:2vw;
     width: 10vw;
     height: 8vw;
     content:url("./assets/images/yelp-logo-mobile.png");
  
->>>>>>> mobile-new
   }
 
   .mobile-menu-icon{
