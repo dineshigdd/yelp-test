@@ -1,5 +1,5 @@
 import React from 'react'
-// import './SearchResult.css'
+import './SearchResult.css'
 import { Review } from '..'
 import hotel from '../../assests/images/hotel.jpg';
 
