@@ -1,11 +1,11 @@
+import MapContainer from "./MapContainer";
 import React from 'react'
 
-function Map() {
-    return (
-        <div>
-            Google Map
-        </div>
-    )
+export default function Map() {
+  return (
+    <div>
+      <MapContainer />
+    </div>
+  )
 }
-
-export default Map
+//https://www.digitalocean.com/community/tutorials/how-to-integrate-the-google-maps-api-into-react-applications

@@ -48,3 +48,8 @@ function SearchResult() {
 }
 
 export default SearchResult
+// API Key
+// DP73lJ7n5m9pL1hZ41GMoO4r2R0zLf8G7tess5ZDnAVt1mH1R4cEX9qsVLW3GRtYBqoZqyvTtQFYsZFRV1AO0A-TTCIMkDk70iQh1vAz7OGRyam_AgIU-ok0SMGCYXYx
+
+// Client ID
+// aFkOwjEgzWErXwZvs0G8Rw
